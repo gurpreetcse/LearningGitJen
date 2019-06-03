@@ -9,7 +9,9 @@ import java.sql.Statement;
 public class dbConn {
 
 	static final String JDBC_DRIVER ="com.ibm.db2.jcc.DB2Driver";  
-	  static final String DB_URL ="jdbc:db2://ajaxludb1009:63934/ssoar01";
+	  static final String DB_URL_ACCP ="jdbc:db2://ajaxludb1009:63934/ssoar01";
+	  static final String DB_URL_INTG ="jdbc:db2://djaxludb1009:62932/SSOIN01";
+	  
 
 		   //  Database credentials
 		   static final String USER = "j691643";
@@ -24,7 +26,7 @@ public class dbConn {
 
 		      //STEP 3: Open a connection
 		      System.out.println("Connecting to a selected database...");
-		      conn = DriverManager.getConnection(DB_URL, USER, PASS);
+		      conn = DriverManager.getConnection(DB_URL_ACCP, USER, PASS);
 		      System.out.println("Connected database successfully...");
 		      
 		      //STEP 4: Execute a query
